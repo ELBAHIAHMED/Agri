@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+
+  myysql:
+    image: mysql:8.0.26
+    container_name: myysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: agri
+    healthcheck:
+      test: "/usr/bin/mysql --user=root --password=mysecretpassword --execute \"SHOW DATABASES;\""
+      interval: 100s
+      retries: 10
+
+
+
+
+
