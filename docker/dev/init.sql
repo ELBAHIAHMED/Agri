@@ -1,0 +1,2 @@
+CREATE DATABASE `agri`;
+CREATE DATABASE `agi_keycloak`;
